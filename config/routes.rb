@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   # devise_for :users, controllers: [omniauth_callbacks: "users/omniauth_callbacks"], class_name: "Jinda::User"
   devise_for :users, path: 'jinda/user', class_name: 'Jinda::User', controllers: {
-        sessions: 'users/sessions'}
+        sessions: 'users/sessions',omniauth_callbacks: 'users/omniauth_callbacks'}
   # , controllers: [omniauth_callbacks: 'users/omniauth_callbacks']
   # start jiinda method routes
   jinda_methods = ['pending','status','search','doc','logs','ajax_notice']
